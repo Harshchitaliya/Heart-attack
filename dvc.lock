@@ -9,8 +9,8 @@ stages:
       size: 11323
     - path: src\data\datainjection.py
       hash: md5
-      md5: c5a36a840e95d9ad8c90f06c74186120
-      size: 1446
+      md5: 24d1ac626602b2b9d36d3527f86a32ca
+      size: 2429
     params:
       params.yaml:
         make_dataset.seed: 2023
