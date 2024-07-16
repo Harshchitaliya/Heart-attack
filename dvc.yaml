@@ -1,0 +1,11 @@
+stages:
+  data_injection:
+    cmd: python src/data/datainjection.py
+    deps:
+    - data\raw\heart.csv
+    - src\data\datainjection.py
+    params:
+    - make_dataset.seed
+    - make_dataset.test_split
+    outs:
+    - data\external

@@ -1,0 +1,23 @@
+schema: '2.0'
+stages:
+  data_injection:
+    cmd: python src/data/datainjection.py
+    deps:
+    - path: data\raw\heart.csv
+      hash: md5
+      md5: 4740fea127fd35cb58a20e2bcc8bf586
+      size: 11323
+    - path: src\data\datainjection.py
+      hash: md5
+      md5: c5a36a840e95d9ad8c90f06c74186120
+      size: 1446
+    params:
+      params.yaml:
+        make_dataset.seed: 2023
+        make_dataset.test_split: 0.2
+    outs:
+    - path: data\external
+      hash: md5
+      md5: 716f920e583c47db5a9b196b0193a7c2.dir
+      size: 10745
+      nfiles: 2
