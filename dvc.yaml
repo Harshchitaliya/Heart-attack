@@ -9,3 +9,15 @@ stages:
     - make_dataset.test_split
     outs:
     - data\external
+
+  train_model:
+    cmd: python src/models/train_model.py
+    deps:
+    - data\external\train_data.csv
+    - src\models\train_model.py
+    params:
+    - train_model.learning_rate
+    - train_model.n_estimators
+    - train_model.max_depth
+    outs:
+    - models\trained_model.pkl
