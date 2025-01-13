@@ -55,3 +55,73 @@ Project Organization
 --------
 
 <p><small>Project based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. #cookiecutterdatascience</small></p>
+
+## Project Description
+
+This project aims to predict the likelihood of heart attack based on various health parameters. The goal is to develop a machine learning model that can accurately predict heart attack risk and provide insights into the factors contributing to heart attacks.
+
+## Setup Instructions
+
+To set up the project, follow these steps:
+
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/Akshar062/Heart-attack.git
+    cd Heart-attack
+    ```
+
+2. Create a virtual environment and activate it:
+    ```bash
+    python3 -m venv venv
+    source venv/bin/activate
+    ```
+
+3. Install the required dependencies:
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+4. Set up the project environment:
+    ```bash
+    make create_environment
+    ```
+
+## Usage Examples
+
+To run the project and make predictions, follow these steps:
+
+1. Prepare the data:
+    ```bash
+    make data
+    ```
+
+2. Train the model:
+    ```bash
+    make train
+    ```
+
+3. Make predictions:
+    ```bash
+    make predict
+    ```
+
+## Contribution Guidelines
+
+We welcome contributions to the project. To contribute, follow these steps:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bugfix.
+3. Make your changes and commit them with descriptive commit messages.
+4. Push your changes to your forked repository.
+5. Create a pull request to the main repository.
+
+## Badges and Links
+
+[![Build Status](https://img.shields.io/travis/Akshar062/Heart-attack.svg)](https://travis-ci.org/Akshar062/Heart-attack)
+[![Documentation Status](https://readthedocs.org/projects/heart-attack/badge/?version=latest)](https://heart-attack.readthedocs.io/en/latest/?badge=latest)
+
+## Contact Information
+
+For any questions or inquiries, please contact the project maintainers:
+
+- Harsh (harsh@example.com)
