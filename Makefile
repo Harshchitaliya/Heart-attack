@@ -1,4 +1,4 @@
-.PHONY: clean data lint requirements sync_data_to_s3 sync_data_from_s3
+.PHONY: clean data lint requirements sync_data_to_s3 sync_data_from_s3 train predict
 
 #################################################################################
 # GLOBALS                                                                       #
@@ -28,6 +28,14 @@ requirements: test_environment
 ## Make Dataset
 data: requirements
 	$(PYTHON_INTERPRETER) src/data/make_dataset.py data/raw data/processed
+
+## Train the model
+train:
+	dvc repro train_model
+
+## Make predictions
+predict:
+	$(PYTHON_INTERPRETER) src/models/predict_model.py
 
 ## Delete all compiled Python files
 clean:
